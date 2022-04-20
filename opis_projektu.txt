@@ -1,0 +1,21 @@
+stworzyć system CI
+1. założyć repozytoria publiczne i skonfigurować system CI
+2. aplikacja
+3. raport
+-cel projektu
+-opis tasków
+-harmonogram pracy
+-opis i konfiguracja CI
+-problemy,błędy,braki
+-linki do githuba/gitlaba
+-screeny i opis aplikacji
++ zip z projektem + logi z githuba/laba
+
+System ciągłej Integracji:
+- Github/gitlab - publiczne repo
+- automatyczne testy commitów
+
+dodatkowe punkty:
+- aplikacja okienkowa 
+- csv
+ 
