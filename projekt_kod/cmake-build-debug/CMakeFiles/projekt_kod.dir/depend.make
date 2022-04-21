@@ -1,2 +1,2 @@
-# Empty dependencies file for cmTC_4d982.
+# Empty dependencies file for projekt_kod.
 # This may be replaced when dependencies are built.

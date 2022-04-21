@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
+  "CXX"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/share/cmake-3.20/Modules/CMakeCCompilerABI.c" "D:/studia/sem_2/narzędzia programistyczne projekt/projekt_właściwy/projekt_kod/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_4d982.dir/CMakeCCompilerABI.c.obj"
+set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/studia/sem_2/narzędzia programistyczne projekt/projekt_właściwy/projekt_kod/main.cpp" "D:/studia/sem_2/narzędzia programistyczne projekt/projekt_właściwy/projekt_kod/cmake-build-debug/CMakeFiles/projekt_kod.dir/main.cpp.obj"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
