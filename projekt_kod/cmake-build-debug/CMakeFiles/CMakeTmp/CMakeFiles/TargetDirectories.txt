@@ -1,0 +1,3 @@
+D:/studia/sem_2/narzędzia programistyczne projekt/projekt_właściwy/projekt_kod/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_4d982.dir
+D:/studia/sem_2/narzędzia programistyczne projekt/projekt_właściwy/projekt_kod/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/edit_cache.dir
+D:/studia/sem_2/narzędzia programistyczne projekt/projekt_właściwy/projekt_kod/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/rebuild_cache.dir
