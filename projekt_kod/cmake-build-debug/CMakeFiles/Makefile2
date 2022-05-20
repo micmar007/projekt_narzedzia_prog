@@ -53,10 +53,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_właściwy\projekt_kod"
+CMAKE_SOURCE_DIR = "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_1\projekt_narzedzia_prog\projekt_kod"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_właściwy\projekt_kod\cmake-build-debug"
+CMAKE_BINARY_DIR = "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_1\projekt_narzedzia_prog\projekt_kod\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/projekt_kod.dir/clean
 CMakeFiles/projekt_kod.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_kod.dir\build.make CMakeFiles/projekt_kod.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_kod.dir\build.make CMakeFiles/projekt_kod.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\studia\sem_2\narzędzia programistyczne projekt\projekt_właściwy\projekt_kod\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target projekt_kod"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\studia\sem_2\narzędzia programistyczne projekt\projekt_1\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target projekt_kod"
 .PHONY : CMakeFiles/projekt_kod.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/projekt_kod.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_właściwy\projekt_kod\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_1\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/projekt_kod.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_właściwy\projekt_kod\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_1\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/projekt_kod.dir/rule
 
 # Convenience name for target.
