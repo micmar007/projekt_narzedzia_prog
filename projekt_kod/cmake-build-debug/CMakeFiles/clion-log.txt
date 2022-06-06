@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "D:\studia\sem_2\narzędzia programistyczne projekt\projekt_1\projekt_narzedzia_prog\projekt_kod"
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\Michal\Desktop\system_rezerwacji_miejsc
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/studia/sem_2/narzÄ™dzia programistyczne projekt/projekt_1/projekt_narzedzia_prog/projekt_kod/cmake-build-debug
+-- Build files have been written to: C:/Users/Michal/Desktop/system_rezerwacji_miejsc/cmake-build-debug
