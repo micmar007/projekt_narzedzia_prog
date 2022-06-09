@@ -11,8 +11,6 @@ iostream
 -
 time.h
 -
-conio.h
--
 fstream
 -
 string
