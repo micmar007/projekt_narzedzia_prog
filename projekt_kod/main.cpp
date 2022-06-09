@@ -1,10 +1,13 @@
 #include <iostream>
 #include <time.h>
 #include <conio.h>
+#include <fstream>
+#include <string>
 void rezerwacja();
 void cennik();
 void rozklad_sali();
 void menu();
+void open_file();
 using namespace std;
 int wybor,x,suma;
 char ans;
@@ -17,19 +20,18 @@ public:
 int main() {
 
         do {
+
         menu();
+
         cin >> wybor;
         switch (wybor) {
             case 1:rezerwacja();
+
             break;
 
             case 2:
                 cout << "\n\n\t\t\tU nas obejrzysz:";
-                cout << "\n\t\t\t1. Hobbit";
-                cout << "\n\t\t\t2. Harry potter";
-                cout << "\n\t\t\t3. Avatar";
-                cout << "\n\t\t\t4. Green Book";
-                cout << "\n\t\t\t5. Doctor strange\n";
+                open_file();
                 cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
                 cin >> ans;
                 break;
@@ -57,14 +59,10 @@ int main() {
 
 }
 void rezerwacja() {
-    system("cls");
+
     cout << "\n\n\t\t\tAktualne seanse :";
-    cout << "\n\n\t\t\t1. Hobbit";
-    cout << "\n\n\t\t\t2. Harry potter";
-    cout << "\n\n\t\t\t3. Avatar";
-    cout << "\n\n\t\t\t4. Green Book";
-    cout << "\n\n\t\t\t5. Doctor strange\n";
-    cout << "\n\t\t\tWybierz 1-5 :" << "\t";
+    open_file();
+    cout << "\t\t\tWybierz 1-5 :" << "\t";
     int a;
     cin >> a;
     cout << "\n\n\t\t\tGodziny seansow dla wybranego przez ciebie filmu";
@@ -447,4 +445,21 @@ void menu(){
     cout << "\n\t\t<5> Rozklad sali kinowej";
     cout << "\n\t\t<6> Wyjscie \n";
     cout << "\n\t\tWybierz opcje 1-6:" << "\t";
+}
+void open_file(){  //odczyt seansow z pliku
+    fstream file;
+    file.open("seanse.csv", ios::in);
+    if (!file.good()){
+        cout <<"\n Brak dostepnych filmow"<<endl;
+        system("pause");
+        main();
+    }
+    string line;
+    while(!file.eof())
+    {
+        getline(file,line);
+        cout<<line<<"\n";
+    }
+file.close();
+
 }
