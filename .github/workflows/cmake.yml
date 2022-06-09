@@ -9,8 +9,16 @@ env:
 jobs:
   build:
     
-    runs-on: ubuntu-latest, windows-latest
-
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        include:
+          - os: windows-latest
+            triplet: x64-windows
+          - os: ubuntu-latest
+            triplet: x64-linux
     steps:
     - uses: actions/checkout@v3        
 
