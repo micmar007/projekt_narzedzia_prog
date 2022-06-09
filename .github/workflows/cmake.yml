@@ -13,6 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: instalacja gcc ubuntu
+        $sudo apt update
+        $sudo apt install build-essential
+        $sudo apt-get install manpages-dev
+        
 
     - name: Create Build Environment
       run: cmake -E make_directory ${{github.workspace}}/projekt_kod/build
