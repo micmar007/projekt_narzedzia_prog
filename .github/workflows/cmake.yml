@@ -15,11 +15,11 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: instalacja gcc ubuntu
-      run:
-        $sudo apt update
-        $sudo apt install build-essential
-        $sudo apt-get install manpages-dev
-        
+      uses: egor-tensin/setup-gcc@v1
+      with:
+       version: latest
+       platform: x64
+          
 
     - name: Create Build Environment
       run: cmake -E make_directory ${{github.workspace}}/projekt_kod/build
