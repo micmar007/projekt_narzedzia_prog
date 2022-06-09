@@ -2,23 +2,17 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "master" ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get -y install git wget build-essential autogen autoconf libtool 
-    - name: autoreconf
-      run: autoreconf -i
     - name: configure
       run: ./configure
     - name: make
