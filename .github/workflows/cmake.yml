@@ -1,4 +1,5 @@
-name: CI C++
+name: CMake
+
 on:
   push:
     branches: [ "master" ]
@@ -9,23 +10,17 @@ env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
     # You can convert this to a matrix build if you need cross-platform coverage.
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-    runs-on: ubuntu-latest
-    
+    runs-on: ubuntu-latest    
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      
+      - uses: actions/checkout@v3
 
-      - name: Print env
-        run: |
-          echo github.event.action: ${{ github.event.action }}
-          echo github.event_name: ${{ github.event_name }}
       - name: Install dependencies on windows
         if: startsWith(windows-latest, 'windows')
         run: |
@@ -35,7 +30,7 @@ jobs:
         # cmd "${{ matrix.config.environment_script }}"
 
       - name: Install dependencies on ubuntu
-        if: startsWith(Ubuntu-latest, 'Ubuntu_Latest_GCC')
+        if: startsWith(ubuntu-latest, 'Ubuntu_Latest_GCC')
         run: |
           sudo apt-get update
           sudo apt-get install ninja-build cmake
