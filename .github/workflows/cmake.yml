@@ -22,7 +22,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies on windows
-        if: startsWith(windows-latest, 'windows')
         run: |
           choco install ninja cmake
           ninja --version
@@ -30,7 +29,7 @@ jobs:
         # cmd "${{ matrix.config.environment_script }}"
 
       - name: Install dependencies on ubuntu
-        if: startsWith(ubuntu-latest, 'Ubuntu_Latest_GCC')
+        
         run: |
           sudo apt-get update
           sudo apt-get install ninja-build cmake
