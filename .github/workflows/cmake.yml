@@ -27,7 +27,7 @@ jobs:
        
       run: 
         apt-get install libqt4-dev cmake intltool
-        $ cd {projekt_narzedzia_prog/projekt_kod}
+        $ cd {/home/runner/work/projekt_narzedzia_prog/projekt_kod}
         $ mkdir build
         $ cd build
         cmake --build 
