@@ -12,14 +12,7 @@ jobs:
     runs-on: ubuntu-latest  
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: instalacja gcc ubuntu
-      uses: egor-tensin/setup-gcc@v1
-      with:
-       version: latest
-       platform: x64
-          
+    - uses: actions/checkout@v3        
 
     - name: Create Build Environment
       run: cmake -E make_directory ${{github.workspace}}/projekt_kod/build
