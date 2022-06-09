@@ -45,14 +45,14 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Movie Ticket Booking System Using C++" />
   </component>
   <component name="RunManager">
-    <configuration name="system_rezerwacji_miejsc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system_rezerwacji_miejsc" TARGET_NAME="system_rezerwacji_miejsc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system_rezerwacji_miejsc" RUN_TARGET_NAME="system_rezerwacji_miejsc">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="system_rezerwacji_miejsc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system_rezerwacji_miejsc" TARGET_NAME="system_rezerwacji_miejsc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system_rezerwacji_miejsc" RUN_TARGET_NAME="system_rezerwacji_miejsc">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -82,6 +82,7 @@
       <workItem from="1654545489164" duration="26000" />
       <workItem from="1654792102555" duration="4067000" />
       <workItem from="1654796233697" duration="204000" />
+      <workItem from="1654806189142" duration="169000" />
     </task>
     <servers />
   </component>

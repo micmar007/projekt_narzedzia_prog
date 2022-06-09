@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include <conio.h>
 #include <fstream>
 #include <string>
 void rezerwacja();
