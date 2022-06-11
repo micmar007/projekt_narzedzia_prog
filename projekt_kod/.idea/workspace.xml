@@ -11,10 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9de3dbc-1ff0-4655-bdac-9eaf9875038c" name="Changes" comment="poprawka1">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.obj" afterDir="false" />
+    <list default="true" id="f9de3dbc-1ff0-4655-bdac-9eaf9875038c" name="Changes" comment="poprawka2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/seanse.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/seanse.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/system_rezerwacji_miejsc.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/system_rezerwacji_miejsc.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -54,14 +55,14 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Movie Ticket Booking System Using C++" />
   </component>
   <component name="RunManager">
-    <configuration name="system_rezerwacji_miejsc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system_rezerwacji_miejsc" TARGET_NAME="system_rezerwacji_miejsc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system_rezerwacji_miejsc" RUN_TARGET_NAME="system_rezerwacji_miejsc">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="system_rezerwacji_miejsc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system_rezerwacji_miejsc" TARGET_NAME="system_rezerwacji_miejsc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system_rezerwacji_miejsc" RUN_TARGET_NAME="system_rezerwacji_miejsc">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -96,7 +97,8 @@
       <workItem from="1654807868075" duration="67000" />
       <workItem from="1654946893101" duration="50000" />
       <workItem from="1654947529450" duration="276000" />
-      <workItem from="1654947840754" duration="171000" />
+      <workItem from="1654947840754" duration="302000" />
+      <workItem from="1654948178182" duration="120000" />
     </task>
     <task id="LOCAL-00001" summary="poprawka">
       <created>1654947574983</created>
@@ -112,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654947953631</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="poprawka2">
+      <created>1654948053378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654948053378</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="poprawka" />
     <MESSAGE value="poprawka1" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawka1" />
+    <MESSAGE value="poprawka2" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawka2" />
   </component>
 </project>
