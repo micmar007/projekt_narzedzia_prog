@@ -29,7 +29,7 @@ int main() {
             break;
 
             case 2:
-                cout << "\n\n\t\t\tU nas obejrzysz:";
+                cout << "\n\n\t\t\tU nas obejrzysz:\n";
                 open_file();
                 cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
                 cin >> ans;
@@ -59,7 +59,7 @@ int main() {
 }
 void rezerwacja() {
     using namespace std;
-    cout << "\n\n\t\t\tAktualne seanse :"<<endl;
+    cout << "\n\n\t\t\tAktualne seanse :\n";
     open_file();
     cout << "\t\t\tWybierz 1-5 :" << "\t";
     int a;
