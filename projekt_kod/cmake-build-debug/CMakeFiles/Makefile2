@@ -44,19 +44,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Michal\Desktop\system_rezerwacji_miejsc
+CMAKE_SOURCE_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Michal\Desktop\system_rezerwacji_miejsc\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/system_rezerwacji_miejsc.dir/clean
 CMakeFiles/system_rezerwacji_miejsc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Michal\Desktop\system_rezerwacji_miejsc\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target system_rezerwacji_miejsc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target system_rezerwacji_miejsc"
 .PHONY : CMakeFiles/system_rezerwacji_miejsc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/system_rezerwacji_miejsc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Michal\Desktop\system_rezerwacji_miejsc\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/system_rezerwacji_miejsc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Michal\Desktop\system_rezerwacji_miejsc\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/system_rezerwacji_miejsc.dir/rule
 
 # Convenience name for target.

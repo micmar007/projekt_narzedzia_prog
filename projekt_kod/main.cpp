@@ -14,7 +14,7 @@ class bilet{
 public:
     char imie[20];
     char tel[11];
-} t;1
+} t;
 
 int main() {
 
