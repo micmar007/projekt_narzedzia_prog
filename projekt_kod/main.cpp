@@ -14,7 +14,7 @@ class bilet{
 public:
     char imie[20];
     char tel[11];
-} t;
+} t;1
 
 int main() {
 
@@ -59,7 +59,7 @@ int main() {
 }
 void rezerwacja() {
 
-    cout << "\n\n\t\t\tAktualne seanse :";
+    cout << "\n\n\t\t\tAktualne seanse :\n";
     open_file();
     cout << "\t\t\tWybierz 1-5 :" << "\t";
     int a;
