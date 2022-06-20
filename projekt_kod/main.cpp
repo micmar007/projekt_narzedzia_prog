@@ -59,7 +59,7 @@ int main() {
 }
 void rezerwacja() {
 
-    cout << "\n\n\t\t\tAktualne seanse :\n";
+    cout << "\n\n\t\t\tAktualne seanse :";
     open_file();
     cout << "\t\t\tWybierz 1-5 :" << "\t";
     int a;
