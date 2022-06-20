@@ -2,22 +2,35 @@
 #include <time.h>
 #include <fstream>
 #include <string>
+#include <chrono>
+#include <ctime>
+
 void rezerwacja();
 void cennik();
 void rozklad_sali();
 void menu();
 void open_file();
+void open_file2();
+void dane();
+void bilet();
+void cena();
 using namespace std;
-int wybor,x,suma;
+int wybor,x,suma,a,b;
+string godziny[200];
+string line[200];
+string filename;
 char ans;
+
+char przyrostek[3];
 class bilet{
 public:
     char imie[20];
     char tel[11];
+    char mail[30];
 } t;
 
 int main() {
-
+    srand( time( NULL ) );
         do {
 
         menu();
@@ -59,345 +72,17 @@ int main() {
 }
 void rezerwacja() {
 
-    cout << "\n\n\t\t\tAktualne seanse :";
+    cout << "\n\n\t\t\tAktualne seanse :\n";
     open_file();
-    cout << "\t\t\tWybierz 1-5 :" << "\t";
-    int a;
+    cout << "\t\t\tWybierz 1-5 : " << "\t";
     cin >> a;
-    cout << "\n\n\t\t\tGodziny seansow dla wybranego przez ciebie filmu";
-    switch (a) {
-        case 1:
-            cout << "\n\n\t\t\tWybierz godzine: ";
-            cout << "\n\t\t\t1. 11:00";
-            cout << "\n\t\t\t2. 13:00";
-            cout << "\n\t\t\t3. 14:50";
-            cout << "\n\t\t\t4. 18:00";
-            cout << "\n\t\t\t5. 21:00";
-            cout << "\n\t\t\t6. 01:00 \n";
-            cout << "\n\n\t\tWybierz godzine: ";
-            int b;
-            cin >> b;
-            cout << "\n\n\t\tWpisz swoje imie: ";
-            cin >> t.imie;
-            cout << "\n\n\t\tPodaj swoj nr telefonu: ";
-            cin >> t.tel;
-            cout << "\n\t\t\tNa jaki seans chcesz kupic bilety?";
-            cout << "\n\t\t\t1. 2D";
-            cout << "\n\t\t\t2. 3D\n";
-            cin >> x;
-            switch (x) {
-                case 1:
-                    int ulg_2d, norm_2d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_2d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_2d;
-                    suma = (ulg_2d * 15) + (norm_2d * 20);
-                    break;
-                case 2:
-                    int ulg_3d, norm_3d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_3d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_3d;
-                    suma = (ulg_3d * 15) + (norm_3d * 20);
-                    break;
-            }
-            cout << "\n\n\t\t\tTwoj bilet ";
-            cout << "\n\t\t\tImie 		    :" << t.imie;
-            cout << "\n\t\t\tNr tel.	  \t:" << t.tel;
-            cout << "\n\t\t\tGodzina seansu	:";
-            switch (b) {
-                case 1:
-                    cout << "08:00";
-                    break;
-                case 2:
-                    cout << "13:00";
-                    break;
-                case 3:
-                    cout << "14:50";
-                    break;
-                case 4:
-                    cout << "18:00";
-                    break;
-                case 5:
-                    cout << "21:00";
-                    break;
-                case 6:
-                    cout << "01:00";
-                    break;
-            }
-            cout << "\n\t\t\tSuma   	 \t:" << suma << " zl";
+    cout << "\n\n\tGodziny seansow dla filmu " <<line[a-1]<<":\n";
+    open_file2();
+    dane();
+    bilet();
 
-            cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
-            cin >> ans;
-            break;
-        case 2:
-            cout << "\n\n\t\t\tWybierz godzine:";
-            cout << "\n\t\t\t1. 09:00";
-            cout << "\n\t\t\t2. 11:00";
-            cout << "\n\t\t\t3. 12:50";
-            cout << "\n\t\t\t4. 15:00";
-            cout << "\n\t\t\t5. 20:00";
-            cout << "\n\t\t\t6. 22:00";
-            cout << "\n\t\t\tWybierz godzine: ";
-            cin >> b;
-            cout << "\n\n\t\t\tWpisz imie: ";
-            cin >> t.imie;
-            cout << "\n\t\t\tPodaj nr telefonu: ";
-            cin >> t.tel;
-            cout << "\n\t\t\tNa jaki seans chcesz kupic bilety?";
-            cout << "\n\t\t\t1. 2D";
-            cout << "\n\t\t\t2. 3D\n";
-            cin >> x;
-            switch (x) {
-                case 1:
-                    int ulg_2d, norm_2d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_2d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_2d;
-                    suma = (ulg_2d * 15) + (norm_2d * 20);
-                    break;
-                case 2:
-                    int ulg_3d, norm_3d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_3d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_3d;
-                    suma = (ulg_3d * 15) + (norm_3d * 20);
-                    break;
-            }
-            cout << "\n\n\t\t\tTwoj bilet ";
-            cout << "\n\t\t\tImie 		    :" << t.imie;
-            cout << "\n\t\t\tNr tel.	    :" << t.tel;
-            cout << "\n\t\t\tGodzina seansu	:";
-            switch (b) {
-                case 1:
-                    cout << "08:00";
-                    break;
-                case 2:
-                    cout << "13:00";
-                    break;
-                case 3:
-                    cout << "14:50";
-                    break;
-                case 4:
-                    cout << "18:00";
-                    break;
-                case 5:
-                    cout << "21:00";
-                    break;
-                case 6:
-                    cout << "01:00";
-                    break;
-            }
-            cout << "\n\t\t\tSuma   	 \t:" << suma << " zl";
-            cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
-            cin >> ans;
-
-            break;
-        case 3:
-            cout << "\n\n\t\t\tGodziny seansu";
-            cout << "\n\t\t\t1. 08:00";
-            cout << "\n\t\t\t2. 13:00";
-            cout << "\n\t\t\t3. 14:50";
-            cout << "\n\t\t\t4. 18:00";
-            cout << "\n\t\t\t5. 21:00";
-            cout << "\n\t\t\t6. 01:00";
-            cout << "\n\t\t\tWybierz godzine seansu";
-            cin >> b;
-            cout << "\n\t\t\tWpisz swoje imie: ";
-            cin >> t.imie;
-            cout << "\n\t\t\tPodaj nr telefonu: ";
-            cin >> t.tel;
-            cout << "\n\t\t\tNa jaki seans chcesz kupic bilety?";
-            cout << "\n\t\t\t1. 2D";
-            cout << "\n\t\t\t2. 3D\n";
-            cin >> x;
-            switch (x) {
-                case 1:
-                    int ulg_2d, norm_2d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_2d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_2d;
-                    suma = (ulg_2d * 15) + (norm_2d * 20);
-                    break;
-                case 2:
-                    int ulg_3d, norm_3d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_3d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_3d;
-                    suma = (ulg_3d * 15) + (norm_3d * 20);
-                    break;
-            }
-            cout << "\n\n\t\t\tTwoj bilet ";
-            cout << "\n\t\t\tImie 		    :" << t.imie;
-            cout << "\n\t\t\tNr tel.	    :" << t.tel;
-            cout << "\n\t\t\tGodzina seansu	:";
-            switch (b) {
-                case 1:
-                    cout << "08:00";
-                    break;
-                case 2:
-                    cout << "13:00";
-                    break;
-                case 3:
-                    cout << "14:50";
-                    break;
-                case 4:
-                    cout << "18:00";
-                    break;
-                case 5:
-                    cout << "21:00";
-                    break;
-                case 6:
-                    cout << "01:00";
-                    break;
-            }
-            cout << "\n\t\t\tSuma   	 \t:" << suma << " zl";
-            cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
-            cin >> ans;
-            break;
-        case 4:
-
-            cout << "\n\n\t\t\tGodziny seansu: ";
-            cout << "\n\t\t\t1. 08:00";
-            cout << "\n\t\t\t2. 13:00";
-            cout << "\n\t\t\t3. 14:50";
-            cout << "\n\t\t\t4. 18:00";
-            cout << "\n\t\t\t5. 21:00";
-            cout << "\n\t\t\t6. 01:00";
-            cout << "\n\t\t\tWybierz godzine seansu: ";
-            cin >> b;
-            cout << "\n\t\t\tWpisz swoje imie: ";
-            cin >> t.imie;
-            cout << "\n\t\t\tPodaj nr telefonu: ";
-            cin >> t.tel;
-            cout << "\n\t\t\tNa jaki seans chcesz kupic bilety?";
-            cout << "\n\t\t\t1. 2D";
-            cout << "\n\t\t\t2. 3D";
-            cin >> x;
-            switch (x) {
-                case 1:
-                    int ulg_2d, norm_2d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_2d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_2d;
-                    suma = (ulg_2d * 15) + (norm_2d * 20);
-                case 2:
-                    int ulg_3d, norm_3d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_3d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_3d;
-                    suma = (ulg_3d * 15) + (norm_3d * 20);
-            }
-            cout << "\n\n\t\t\tTwoj bilet ";
-            cout << "\n\t\t\tImie 		    :" << t.imie;
-            cout << "\n\t\t\tNr tel.	    :" << t.tel;
-            cout << "\n\t\t\tGodzina seansu	:";
-            switch (b) {
-                case 1:
-                    cout << "08:00";
-                    break;
-                case 2:
-                    cout << "13:00";
-                    break;
-                case 3:
-                    cout << "14:50";
-                    break;
-                case 4:
-                    cout << "18:00";
-                    break;
-                case 5:
-                    cout << "21:00";
-                    break;
-                case 6:
-                    cout << "01:00";
-                    break;
-            }
-            cout << "\n\t\t\tSuma   	 \t:" << suma << " zl";
-            cout << "\n\n\t\t\tBilet nalezy odebrac 20 minut przed seansem w kasie kina.";
-            cout << "\n\n\t\t\tChcesz wybrac inna opcje(t/n)";
-            cin >> ans;
-            break;
-        case 5:
-
-            cout << "\n\n\t\t\tGodziny seansow:";
-            cout << "\n\t\t\t1. 08:00";
-            cout << "\n\t\t\t2. 13:00";
-            cout << "\n\t\t\t3. 14:50";
-            cout << "\n\t\t\t4. 18:00";
-            cout << "\n\t\t\t5. 21:00";
-            cout << "\n\t\t\t6. 01:00";
-            cout << "\n\t\t\tWybierz godzine: ";
-            cin >> b;
-            cout << "\n\t\t\tWpisz swoje imie: ";
-            cin >> t.imie;
-            cout << "\n\t\t\tPodaj nr telefonu: ";
-            cin >> t.tel;
-            cout << "\n\t\t\tNa jaki seans chcesz kupic bilety?";
-            cout << "\n\t\t\t1. 2D";
-            cout << "\n\t\t\t2. 3D\n";
-            cin >> x;
-            switch (x) {
-                case 1:
-                    int ulg_2d, norm_2d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_2d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_2d;
-                    suma = (ulg_2d * 15) + (norm_2d * 20);
-                    break;
-                case 2:
-                    int ulg_3d, norm_3d;
-                    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-                    cin >> ulg_3d;
-                    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-                    cin >> norm_3d;
-                    suma = (ulg_3d * 15) + (norm_3d * 20);
-                    break;
-
-            }
-            cout << "\n\n\t\t\tTwoj bilet ";
-            cout << "\n\t\t\tImie 		    :" << t.imie;
-            cout << "\n\t\t\tNr tel.	    :" << t.tel;
-            cout << "\n\t\t\tGodzina seansu	:";
-            switch (b) {
-                case 1:
-                    cout << "08:00";
-                    break;
-                case 2:
-                    cout << "13:00";
-                    break;
-                case 3:
-                    cout << "14:50";
-                    break;
-                case 4:
-                    cout << "18:00";
-                    break;
-                case 5:
-                    cout << "21:00";
-                    break;
-                case 6:
-                    cout << "01:00";
-                    break;
-                default:
-                    cout << "\n\t\t\tWybierz liczbe 1-6\n";
-                    break;
-            }
-            cout << "\n\t\t\tSuma   	 \t:" << suma << " zl";
-            cout << "\n\n\t\t\tBilet nalezy odebrac 20 minut przed seansem w kasie kina.";
-            cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
-            cin >> ans;
-            system("cls");
-            break;
-    }
 }
+
 void cennik(){
 
         cout << "\t\t---------------";
@@ -425,18 +110,15 @@ void rozklad_sali(){
     cin >> ans;
 }
 void menu(){
-    time_t czas;
-    struct tm * data;
-    char godzina[ 80 ];
-    time( & czas );
-    data = localtime( & czas );
-    strftime( godzina, 80, " %H:%M", data );
+    auto now = std::chrono::system_clock::now();
+    std::time_t c_time = std::chrono::system_clock::to_time_t(now);
+
 
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t       System rezerwacji miejsc ";
     cout << "\n\t\t\t-------------------------------------";
-    cout << "\n\t\t\t\tWitaj w naszym kinie!";
-    cout<< "\n\t\t\t\tJest godzina:"<<godzina;
+    cout << "\n\t\t\t\tWitaj w naszym kinie! ";
+    std::cout << "Dzis mamy: " << std::ctime(&c_time);
     cout << "\n\n\t\t<1> Zarezerwuj bilet";
     cout << "\n\t\t<2> Co jest grane?";
     cout << "\n\t\t<3> Cennik";
@@ -451,14 +133,110 @@ void open_file(){  //odczyt seansow z pliku
     if (!file.good()){
         cout <<"\n Brak dostepnych filmow"<<endl;
         system("pause");
-        main();
+
     }
-    string line;
-    while(!file.eof())
+
+    int s=0;
+    while(s<5)
+
     {
-        getline(file,line);
-        cout<<line<<"\n";
+
+        getline(file, line[s]);
+        cout << s + 1 << "." << line[s] << "\n";
+
+        s++;
     }
 file.close();
 
 }
+void open_file2() {
+
+    fstream file;
+
+    string nazwy={"godziny"};
+    filename=nazwy + itoa(a, przyrostek,10)+".csv";
+
+    file.open(filename, ios::in);
+    if (!file.good()) {
+        cout << "\n Brak dostepnych filmow" << endl;
+        system("pause");
+
+    }
+
+    int z = 0;
+   do {
+
+       getline(file, godziny[z]);
+
+       cout << z + 1 << "." << godziny[z] << "\n";
+       z++;
+   }
+        while (z<5);
+    file.close();
+
+}
+
+void dane(){cout << "\n\n\t\tWybierz godzine: ";
+    cin >> b;
+    cout << "\n\n\t\tWpisz swoje imie: ";
+    cin >> t.imie;
+    cout << "\n\n\t\tPodaj swoj nr telefonu: ";
+    cin >> t.tel;
+    cout << "\n\n\t\tPodaj swoj adres email: ";
+    cin >> t.mail;
+    cout << "\n\t\t\tNa jaki seans chcesz kupic bilety?";
+    cout << "\n\t\t\t1. 2D";
+    cout << "\n\t\t\t2. 3D";
+    cout << "\n\t\t\t:";
+    cin >> x;
+    cena();
+}
+
+    void cena() {
+        int ulg, norm;
+        cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
+        cout << "\n\t\t\t:";
+        cin >> ulg;
+        cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
+        cout << "\n\t\t\t:";
+        cin >> norm;
+
+
+        switch (x) {
+            case 1:
+                suma = (ulg * 15) + (norm * 20);
+                break;
+            case 2:
+                suma = (ulg * 20) + (norm * 25);
+        }
+    }
+    void bilet(){
+           int rez=1000+rand()%9999;
+            cout << "\n\n\t\t\tTwoj bilet:\n ";
+            cout << "\n\t\t\tNr. rezerwacji: "<<rez	;
+            cout << "\n\t\t\tImie: 		" << t.imie;
+            cout << "\n\t\t\tNr tel.:	" << t.tel;
+            cout << "\n\t\t\tMail:		" << t.mail;
+            cout << "\n\t\t\tGodzina seansu:	" <<godziny[b-1];
+            cout << "\n\t\t\tSuma:   \t" << suma << " zl";
+            cout << "\n\n\t\t\tChcesz zapisac bilet do pliku(t/n)";// zapisywanie nie dziala xd
+            cin >> ans;
+            if (ans=='t')
+            {
+                ofstream file;
+
+                file.open("bilet.txt",ios::out);
+
+
+                file<<rez;
+                file<<t.imie;
+                file<<t.tel;
+                file<<t.mail;
+                file<< godziny[b-1];
+                file<<suma;
+                file.close();
+                cout << "\n\n\t\t\tZapisano!";
+            }
+            cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
+            cin >> ans;
+    }
