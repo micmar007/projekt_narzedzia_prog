@@ -17,15 +17,17 @@ void dane();
 void bilet();
 void wys_bilet();
 void cena();
-
+void data();
 
 using namespace std;
-int wybor,x,suma,a,b,miej,filmax=5,dzien,dzietyg,rok,mies,dzienmie,godzina,minuty;
+int wybor,s,x,suma,a,b,miej,filmax=5,dzien,dzietyg,rok,mies,dzienmie,godzina,minuty;
 string godziny[200],line[200], filename;
 string tydzien[] ={"Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota", "Niedziela"};
 string miesiac[] ={"Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"};
+int liczbaDni[] ={0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
+int dzienroku;
 char ans,rzad,przyrostek[3];
-bool flaga=false;
+bool flaga=false, flaga2=true;
 
 class bilet{
 public:
@@ -49,7 +51,10 @@ int main() {
     dzienmie=st.wDay;
     godzina =st.wHour;
     minuty=st.wMinute;
+    dzienroku=dzienmie+liczbaDni[mies-1];
 
+
+    cout<<dzienroku;
     srand( time( NULL ) );
     do {
 
@@ -102,14 +107,38 @@ void rezerwacja() {
 
     cout << "\n\n\t\t\tAktualne seanse :\n";
     open_file();
-    cout << "\t\t\tWybierz 1-5 : " << "\t";
-    cin >> a;
+    cout << "\n\t\t\tWybierz film (1-5) : " ;
+    cin >> a;cout<< endl;
+    data();
+    cout << "\n\t\t\tWybierz date: " << "\t";
+    cin >> s;
     cout << "\n\n\tGodziny seansow dla filmu " <<line[a-1]<<":\n";
     open_file2();
     dane();
     bilet();
 
 }
+
+void data(){
+    cout << "\n\n\tDaty seansow dla filmu " <<line[a-1]<<":\n\n";
+for (int i=0;i<7;i++){
+if (dzienroku+i>liczbaDni[mies])
+{
+if(flaga2=true)
+{
+mies=mies+1;
+flaga2=false;
+}
+
+dzienmie=1-i;}
+
+if (dzietyg-1+i>6)
+    cout<<i+1<<"."<< tydzien[dzietyg+i-8]<<" "<<dzienmie+i<<" "<<miesiac[mies-1]<<"\n";
+else
+cout<<i+1<<"."<< tydzien[dzietyg-1+i]<<" "<<dzienmie+i<<" "<<miesiac[mies-1]<<"\n";
+
+
+}}
 
 void wys_bilet(){
     cout << "\t _______________________________________________________________________\n";
@@ -124,7 +153,7 @@ void wys_bilet(){
     }
 
     int s=0;
-    while(s<8)
+    while(s<9)
 
     {
 
@@ -291,6 +320,15 @@ void bilet(){
     cout << "\n\t\t\tMail:		" << t.mail;
     cout << "\n\t\t\tRzad:		" << rzad;
     cout << "\n\t\t\tMiejsce:	" << miej;
+    if (dzienroku+s-1>liczbaDni[mies])
+    {   mies=mies+1;
+        dzienmie=1-s-1;}
+
+    if (dzietyg-1+s-1>6)
+        cout << "\n\t\t\tData:		"<< tydzien[dzietyg+s-1-8]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1]<<"\n";
+    else
+        cout << "\n\t\t\tData:		"<< tydzien[dzietyg-1+s-1]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1]<<"\n";
+
     cout << "\n\t\t\tGodzina seansu:	" <<godziny[b-1];
     cout << "\n\t\t\tSuma:   \t" << suma << " zl";
     cout << "\n\n\t\t\tChcesz zapisac bilet do pliku(t/n)";
@@ -309,6 +347,10 @@ void bilet(){
         file<<"Rzad:"<<rzad<<endl;
         file<<"Miejsce:"<<miej<<endl;
         file<< "Godzina seansu:"<<godziny[b-1]<<endl;
+        if (dzietyg-1+s-1>6)
+            file<< "Data:" <<tydzien[dzietyg+s-1-8]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1] ;
+        else
+            file<< "Data:" <<tydzien[dzietyg-1+s-1]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1] ;
         file<<"Suma:"<<suma<<"zl"<<endl;
         file.close();
         cout << "\n\n\t\t\tZapisano!";
