@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
-project(system_rezerwacji_miejsc)
+project(projekt_rezerwacja_miejsc_2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(system_rezerwacji_miejsc main.cpp)
+add_executable(projekt_rezerwacja_miejsc_2 main.cpp)

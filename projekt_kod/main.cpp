@@ -5,6 +5,7 @@
 #include <chrono>
 #include <ctime>
 
+
 void rezerwacja();
 void cennik();
 void rozklad_sali();
@@ -14,6 +15,7 @@ void open_file2();
 void dane();
 void bilet();
 void cena();
+
 using namespace std;
 int wybor,x,suma,a,b;
 string godziny[200];
@@ -28,6 +30,7 @@ public:
     char tel[11];
     char mail[30];
 } t;
+
 
 int main() {
     srand( time( NULL ) );
@@ -118,7 +121,7 @@ void menu(){
     cout << "\n\t\t\t       System rezerwacji miejsc ";
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t\tWitaj w naszym kinie! ";
-    std::cout << "Dzis mamy: " << std::ctime(&c_time);
+    cout << "\n\t\t\tDzis mamy: " << ctime(&c_time);
     cout << "\n\n\t\t<1> Zarezerwuj bilet";
     cout << "\n\t\t<2> Co jest grane?";
     cout << "\n\t\t<3> Cennik";
@@ -178,6 +181,7 @@ void open_file2() {
 
 void dane(){cout << "\n\n\t\tWybierz godzine: ";
     cin >> b;
+
     cout << "\n\n\t\tWpisz swoje imie: ";
     cin >> t.imie;
     cout << "\n\n\t\tPodaj swoj nr telefonu: ";
@@ -228,12 +232,12 @@ void dane(){cout << "\n\n\t\tWybierz godzine: ";
                 file.open("bilet.txt",ios::out);
 
 
-                file<<rez;
-                file<<t.imie;
-                file<<t.tel;
-                file<<t.mail;
-                file<< godziny[b-1];
-                file<<suma;
+                file<<"Nr. rezerwacji:"<<rez<<endl;
+                file<<"Imie:"<<t.imie<<endl;
+                file<<"Nr tel.:"<<t.tel<<endl;
+                file<<"Mail:"<<t.mail<<endl;
+                file<< "Godzina seansu:"<<godziny[b-1]<<endl;
+                file<<"Suma:"<<suma<<"zl"<<endl;
                 file.close();
                 cout << "\n\n\t\t\tZapisano!";
             }

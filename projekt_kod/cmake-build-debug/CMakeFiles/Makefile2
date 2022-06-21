@@ -44,25 +44,25 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod
+CMAKE_SOURCE_DIR = C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/system_rezerwacji_miejsc.dir/all
+all: CMakeFiles/projekt_rezerwacja_miejsc_2.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/system_rezerwacji_miejsc.dir/clean
+clean: CMakeFiles/projekt_rezerwacja_miejsc_2.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/system_rezerwacji_miejsc.dir
+# Target rules for target CMakeFiles/projekt_rezerwacja_miejsc_2.dir
 
 # All Build rule for target.
-CMakeFiles/system_rezerwacji_miejsc.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target system_rezerwacji_miejsc"
-.PHONY : CMakeFiles/system_rezerwacji_miejsc.dir/all
+CMakeFiles/projekt_rezerwacja_miejsc_2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target projekt_rezerwacja_miejsc_2"
+.PHONY : CMakeFiles/projekt_rezerwacja_miejsc_2.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/system_rezerwacji_miejsc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/system_rezerwacji_miejsc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/system_rezerwacji_miejsc.dir/rule
+CMakeFiles/projekt_rezerwacja_miejsc_2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/projekt_rezerwacja_miejsc_2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/projekt_rezerwacja_miejsc_2.dir/rule
 
 # Convenience name for target.
-system_rezerwacji_miejsc: CMakeFiles/system_rezerwacji_miejsc.dir/rule
-.PHONY : system_rezerwacji_miejsc
+projekt_rezerwacja_miejsc_2: CMakeFiles/projekt_rezerwacja_miejsc_2.dir/rule
+.PHONY : projekt_rezerwacja_miejsc_2
 
 # clean rule for target.
-CMakeFiles/system_rezerwacji_miejsc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/clean
-.PHONY : CMakeFiles/system_rezerwacji_miejsc.dir/clean
+CMakeFiles/projekt_rezerwacja_miejsc_2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/clean
+.PHONY : CMakeFiles/projekt_rezerwacja_miejsc_2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

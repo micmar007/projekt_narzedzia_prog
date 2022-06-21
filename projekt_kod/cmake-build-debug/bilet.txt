@@ -1,1 +1,6 @@
-10846sfd332fsdf19:4550
+Nr. rezerwacji:2865
+Imie:Michal
+Nr tel.:997
+Mail:michal.m@gmail.com
+Godzina seansu:19:30
+Suma:90zl

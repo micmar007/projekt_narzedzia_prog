@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="system_rezerwacji_miejsc" targetName="system_rezerwacji_miejsc" />
+      <config projectName="projekt_rezerwacja_miejsc_2" targetName="projekt_rezerwacja_miejsc_2" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,16 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9de3dbc-1ff0-4655-bdac-9eaf9875038c" name="Changes" comment="Poprawka wyswietlania rozkladu sali">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/seanse.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/seanse.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/system_rezerwacji_miejsc.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/system_rezerwacji_miejsc.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="42ca8f17-67b7-4a8f-bbea-d027041161c3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,18 +21,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="29HsvOpHcAlB7lZ7fOQPBUW4skc" />
+  <component name="ProjectId" id="2AsRN4CgG3ZRXA7jbk13HEgMrpp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,10 +34,9 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Movie Ticket Booking System Using C++" />
   </component>
   <component name="RunManager">
-    <configuration name="system_rezerwacji_miejsc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system_rezerwacji_miejsc" TARGET_NAME="system_rezerwacji_miejsc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system_rezerwacji_miejsc" RUN_TARGET_NAME="system_rezerwacji_miejsc">
+    <configuration name="projekt_rezerwacja_miejsc_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekt_rezerwacja_miejsc_2" TARGET_NAME="projekt_rezerwacja_miejsc_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projekt_rezerwacja_miejsc_2" RUN_TARGET_NAME="projekt_rezerwacja_miejsc_2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -66,95 +45,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f9de3dbc-1ff0-4655-bdac-9eaf9875038c" name="Changes" comment="" />
-      <created>1652781575157</created>
+      <changelist id="42ca8f17-67b7-4a8f-bbea-d027041161c3" name="Changes" comment="" />
+      <created>1655796262742</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652781575157</updated>
-      <workItem from="1652781577917" duration="1432000" />
-      <workItem from="1652783085265" duration="579000" />
-      <workItem from="1652783720737" duration="5283000" />
-      <workItem from="1652790476157" duration="2088000" />
-      <workItem from="1652793334773" duration="1753000" />
-      <workItem from="1652797857751" duration="5541000" />
-      <workItem from="1652803615425" duration="38000" />
-      <workItem from="1652804013699" duration="41000" />
-      <workItem from="1652806276658" duration="119000" />
-      <workItem from="1653064515347" duration="156000" />
-      <workItem from="1653119211869" duration="284000" />
-      <workItem from="1653119867078" duration="50000" />
-      <workItem from="1653134391872" duration="1706000" />
-      <workItem from="1654543186007" duration="1091000" />
-      <workItem from="1654544304502" duration="26000" />
-      <workItem from="1654545489164" duration="26000" />
-      <workItem from="1654792102555" duration="4067000" />
-      <workItem from="1654796233697" duration="204000" />
-      <workItem from="1654806189142" duration="169000" />
-      <workItem from="1654807461715" duration="114000" />
-      <workItem from="1654807868075" duration="67000" />
-      <workItem from="1654946893101" duration="50000" />
-      <workItem from="1654947529450" duration="276000" />
-      <workItem from="1654947840754" duration="302000" />
-      <workItem from="1654948178182" duration="120000" />
+      <updated>1655796262742</updated>
+      <workItem from="1655796265487" duration="31000" />
+      <workItem from="1655796374546" duration="2561000" />
+      <workItem from="1655799401125" duration="103000" />
     </task>
-    <task id="LOCAL-00001" summary="poprawka">
-      <created>1654947574983</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654947574983</updated>
-    </task>
-    <task id="LOCAL-00002" summary="poprawka1">
-      <created>1654947953631</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1654947953631</updated>
-    </task>
-    <task id="LOCAL-00003" summary="poprawka2">
-      <created>1654948053378</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1654948053378</updated>
-    </task>
-    <task id="LOCAL-00004" summary="poprawka2">
-      <created>1655747148537</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1655747148537</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Poprawka wyswietlania rozkladu sali">
-      <created>1655747263937</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1655747263937</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="poprawka" />
-    <MESSAGE value="poprawka1" />
-    <MESSAGE value="poprawka2" />
-    <MESSAGE value="Poprawka wyswietlania rozkladu sali" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poprawka wyswietlania rozkladu sali" />
   </component>
 </project>

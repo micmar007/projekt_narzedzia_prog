@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod
+CMAKE_SOURCE_DIR = C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\proje
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug\CMakeFiles C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\Documents\projekt\projekt_narzedzia_prog\projekt_kod\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Michal\Desktop\projekt_rezerwacja_miejsc_2\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named system_rezerwacji_miejsc
+# Target rules for targets named projekt_rezerwacja_miejsc_2
 
 # Build rule for target.
-system_rezerwacji_miejsc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 system_rezerwacji_miejsc
-.PHONY : system_rezerwacji_miejsc
+projekt_rezerwacja_miejsc_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 projekt_rezerwacja_miejsc_2
+.PHONY : projekt_rezerwacja_miejsc_2
 
 # fast build rule for target.
-system_rezerwacji_miejsc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/build
-.PHONY : system_rezerwacji_miejsc/fast
+projekt_rezerwacja_miejsc_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/build
+.PHONY : projekt_rezerwacja_miejsc_2/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -141,7 +141,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -149,7 +149,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\system_rezerwacji_miejsc.dir\build.make CMakeFiles/system_rezerwacji_miejsc.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt_rezerwacja_miejsc_2.dir\build.make CMakeFiles/projekt_rezerwacja_miejsc_2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -160,7 +160,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... system_rezerwacji_miejsc
+	@echo ... projekt_rezerwacja_miejsc_2
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
