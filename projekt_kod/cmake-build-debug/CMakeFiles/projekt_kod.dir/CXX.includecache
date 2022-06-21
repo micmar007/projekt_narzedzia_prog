@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Michal/Desktop/system_rezerwacji_miejsc/main.cpp
+C:/Users/Michal/Desktop/projekt_kod/main.cpp
 iostream
 -
 time.h
 -
-conio.h
+fstream
+-
+string
+-
+chrono
+-
+ctime
 -
 

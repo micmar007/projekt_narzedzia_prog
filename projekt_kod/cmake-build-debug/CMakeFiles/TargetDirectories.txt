@@ -1,3 +1,3 @@
-C:/Users/Michal/Desktop/system_rezerwacji_miejsc/cmake-build-debug/CMakeFiles/system_rezerwacji_miejsc.dir
-C:/Users/Michal/Desktop/system_rezerwacji_miejsc/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Michal/Desktop/system_rezerwacji_miejsc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Michal/Desktop/projekt_kod/cmake-build-debug/CMakeFiles/projekt_kod.dir
+C:/Users/Michal/Desktop/projekt_kod/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Michal/Desktop/projekt_kod/cmake-build-debug/CMakeFiles/rebuild_cache.dir

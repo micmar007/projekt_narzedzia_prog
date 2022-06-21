@@ -34,7 +34,7 @@ public:
 
 int main() {
     srand( time( NULL ) );
-        do {
+    do {
 
         menu();
 
@@ -42,7 +42,7 @@ int main() {
         switch (wybor) {
             case 1:rezerwacja();
 
-            break;
+                break;
 
             case 2:
                 cout << "\n\n\t\t\tU nas obejrzysz:"<<endl;
@@ -51,7 +51,7 @@ int main() {
                 cin >> ans;
                 break;
             case 3:cennik();
-            break;
+                break;
 
             case 4:
                 cout << "\t\t---------------";
@@ -88,16 +88,16 @@ void rezerwacja() {
 
 void cennik(){
 
-        cout << "\t\t---------------";
-        cout << "\t\tFilmy 2D";
-        cout << "\t---------------";
-        cout << "\n\n\t\t\tNormalny:20 zl \t\tUlgowy:15 zl";
-        cout << "\n\n\t\t---------------";
-        cout << "\t\tFilmy 3D";
-        cout << "\t---------------";
-        cout << "\n\n\t\t\tNormalny:25 zl \t\tUlgowy:20 zl";
-        cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
-        cin >> ans;
+    cout << "\t\t---------------";
+    cout << "\t\tFilmy 2D";
+    cout << "\t---------------";
+    cout << "\n\n\t\t\tNormalny:20 zl \t\tUlgowy:15 zl";
+    cout << "\n\n\t\t---------------";
+    cout << "\t\tFilmy 3D";
+    cout << "\t---------------";
+    cout << "\n\n\t\t\tNormalny:25 zl \t\tUlgowy:20 zl";
+    cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
+    cin >> ans;
 
 };
 void rozklad_sali(){
@@ -149,7 +149,7 @@ void open_file(){  //odczyt seansow z pliku
 
         s++;
     }
-file.close();
+    file.close();
 
 }
 void open_file2() {
@@ -167,14 +167,14 @@ void open_file2() {
     }
 
     int z = 0;
-   do {
+    do {
 
-       getline(file, godziny[z]);
+        getline(file, godziny[z]);
 
-       cout << z + 1 << "." << godziny[z] << "\n";
-       z++;
-   }
-        while (z<5);
+        cout << z + 1 << "." << godziny[z] << "\n";
+        z++;
+    }
+    while (z<5);
     file.close();
 
 }
@@ -196,51 +196,51 @@ void dane(){cout << "\n\n\t\tWybierz godzine: ";
     cena();
 }
 
-    void cena() {
-        int ulg, norm;
-        cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
-        cout << "\n\t\t\t:";
-        cin >> ulg;
-        cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
-        cout << "\n\t\t\t:";
-        cin >> norm;
+void cena() {
+    int ulg, norm;
+    cout << "\n\t\t\tIle biletow ulgowych chcesz kupic?";
+    cout << "\n\t\t\t:";
+    cin >> ulg;
+    cout << "\n\t\t\tIle biletow normalnych chcesz kupic?";
+    cout << "\n\t\t\t:";
+    cin >> norm;
 
 
-        switch (x) {
-            case 1:
-                suma = (ulg * 15) + (norm * 20);
-                break;
-            case 2:
-                suma = (ulg * 20) + (norm * 25);
-        }
+    switch (x) {
+        case 1:
+            suma = (ulg * 15) + (norm * 20);
+            break;
+        case 2:
+            suma = (ulg * 20) + (norm * 25);
     }
-    void bilet(){
-           int rez=1000+rand()%9999;
-            cout << "\n\n\t\t\tTwoj bilet:\n ";
-            cout << "\n\t\t\tNr. rezerwacji: "<<rez	;
-            cout << "\n\t\t\tImie: 		" << t.imie;
-            cout << "\n\t\t\tNr tel.:	" << t.tel;
-            cout << "\n\t\t\tMail:		" << t.mail;
-            cout << "\n\t\t\tGodzina seansu:	" <<godziny[b-1];
-            cout << "\n\t\t\tSuma:   \t" << suma << " zl";
-            cout << "\n\n\t\t\tChcesz zapisac bilet do pliku(t/n)";// zapisywanie nie dziala xd
-            cin >> ans;
-            if (ans=='t')
-            {
-                ofstream file;
+}
+void bilet(){
+    int rez=1000+rand()%9999;
+    cout << "\n\n\t\t\tTwoj bilet:\n ";
+    cout << "\n\t\t\tNr. rezerwacji: "<<rez	;
+    cout << "\n\t\t\tImie: 		" << t.imie;
+    cout << "\n\t\t\tNr tel.:	" << t.tel;
+    cout << "\n\t\t\tMail:		" << t.mail;
+    cout << "\n\t\t\tGodzina seansu:	" <<godziny[b-1];
+    cout << "\n\t\t\tSuma:   \t" << suma << " zl";
+    cout << "\n\n\t\t\tChcesz zapisac bilet do pliku(t/n)";// zapisywanie nie dziala xd
+    cin >> ans;
+    if (ans=='t')
+    {
+        ofstream file;
 
-                file.open("bilet.txt",ios::out);
+        file.open("bilet.txt",ios::out);
 
 
-                file<<"Nr. rezerwacji:"<<rez<<endl;
-                file<<"Imie:"<<t.imie<<endl;
-                file<<"Nr tel.:"<<t.tel<<endl;
-                file<<"Mail:"<<t.mail<<endl;
-                file<< "Godzina seansu:"<<godziny[b-1]<<endl;
-                file<<"Suma:"<<suma<<"zl"<<endl;
-                file.close();
-                cout << "\n\n\t\t\tZapisano!";
-            }
-            cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
-            cin >> ans;
+        file<<"Nr. rezerwacji:"<<rez<<endl;
+        file<<"Imie:"<<t.imie<<endl;
+        file<<"Nr tel.:"<<t.tel<<endl;
+        file<<"Mail:"<<t.mail<<endl;
+        file<< "Godzina seansu:"<<godziny[b-1]<<endl;
+        file<<"Suma:"<<suma<<"zl"<<endl;
+        file.close();
+        cout << "\n\n\t\t\tZapisano!";
     }
+    cout << "\n\n\t\t\tChcesz wybrac inna opcje?(t/n)";
+    cin >> ans;
+}

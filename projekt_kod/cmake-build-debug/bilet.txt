@@ -1,6 +1,6 @@
-Nr. rezerwacji:2865
+Nr. rezerwacji:4646
 Imie:Michal
 Nr tel.:997
-Mail:michal.m@gmail.com
+Mail:Michal.m
 Godzina seansu:19:30
-Suma:90zl
+Suma:95zl

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="projekt_rezerwacja_miejsc_2" targetName="projekt_rezerwacja_miejsc_2" />
+      <config projectName="projekt_kod" targetName="projekt_kod" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42ca8f17-67b7-4a8f-bbea-d027041161c3" name="Changes" comment="" />
+    <list default="true" id="dc2749f6-0c5a-4505-b19a-3dacc999617b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +21,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="ProjectId" id="2AsRN4CgG3ZRXA7jbk13HEgMrpp" />
+  <component name="ProjectId" id="2Asb1DfqXgAJcry7RKC7kWJrqyt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,23 +36,31 @@
     <property name="cmake.loaded.for.project" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="projekt_rezerwacja_miejsc_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekt_rezerwacja_miejsc_2" TARGET_NAME="projekt_rezerwacja_miejsc_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projekt_rezerwacja_miejsc_2" RUN_TARGET_NAME="projekt_rezerwacja_miejsc_2">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="projekt_kod" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekt_kod" TARGET_NAME="projekt_kod" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projekt_kod" RUN_TARGET_NAME="projekt_kod">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="42ca8f17-67b7-4a8f-bbea-d027041161c3" name="Changes" comment="" />
-      <created>1655796262742</created>
+      <changelist id="dc2749f6-0c5a-4505-b19a-3dacc999617b" name="Changes" comment="" />
+      <created>1655801022737</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655796262742</updated>
-      <workItem from="1655796265487" duration="31000" />
-      <workItem from="1655796374546" duration="2561000" />
-      <workItem from="1655799401125" duration="103000" />
+      <updated>1655801022737</updated>
+      <workItem from="1655801024949" duration="72000" />
     </task>
     <servers />
   </component>
