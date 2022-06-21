@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Michal/Desktop/projekt_kod/main.cpp
+C:/Users/Admin/Documents/projekt/projekt_narzedzia_prog/projekt_kod/main.cpp
 iostream
 -
 time.h
@@ -17,6 +17,8 @@ string
 -
 chrono
 -
-ctime
+windows.h
+-
+winbase.h
 -
 

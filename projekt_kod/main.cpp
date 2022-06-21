@@ -3,7 +3,8 @@
 #include <fstream>
 #include <string>
 #include <chrono>
-#include <ctime>
+#include <windows.h>
+#include <winbase.h>
 
 
 void rezerwacja();
@@ -14,16 +15,18 @@ void open_file();
 void open_file2();
 void dane();
 void bilet();
+void wys_bilet();
 void cena();
 
-using namespace std;
-int wybor,x,suma,a,b;
-string godziny[200];
-string line[200];
-string filename;
-char ans;
 
-char przyrostek[3];
+using namespace std;
+int wybor,x,suma,a,b,miej,filmax=5,dzien,dzietyg,rok,mies,dzienmie,godzina,minuty;
+string godziny[200],line[200], filename;
+string tydzien[] ={"Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota", "Niedziela"};
+string miesiac[] ={"Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"};
+char ans,rzad,przyrostek[3];
+bool flaga=false;
+
 class bilet{
 public:
     char imie[20];
@@ -32,7 +35,21 @@ public:
 } t;
 
 
+
+
+
+
 int main() {
+
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+    dzietyg=st.wDayOfWeek;
+    rok=st.wYear;
+    mies=st.wMonth;
+    dzienmie=st.wDay;
+    godzina =st.wHour;
+    minuty=st.wMinute;
+
     srand( time( NULL ) );
     do {
 
@@ -40,6 +57,7 @@ int main() {
 
         cin >> wybor;
         switch (wybor) {
+
             case 1:rezerwacja();
 
                 break;
@@ -50,6 +68,7 @@ int main() {
                 cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
                 cin >> ans;
                 break;
+
             case 3:cennik();
                 break;
 
@@ -61,10 +80,16 @@ int main() {
                 cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
                 cin >> ans;
                 break;
+
             case 5:
                 rozklad_sali();
                 break;
+
             case 6:
+                wys_bilet();
+                break;
+
+            case 7:
                 cout << "\n\t\t\tMamy nadzieje, ze wrocisz do nas wkrotce :)\n\n";
                 system("PAUSE");
                 return (0);
@@ -84,6 +109,33 @@ void rezerwacja() {
     dane();
     bilet();
 
+}
+
+void wys_bilet(){
+    cout << "\t _______________________________________________________________________\n";
+     cout    << "\t\t\t\t\t           BILET\n";
+       cout  << "\t    ________________________________________________________________________________\n";
+    fstream file;
+    file.open("bilet.txt", ios::in);
+    if (!file.good()){
+        cout <<"\n Brak dostepnych biletow"<<endl;
+        system("pause");
+
+    }
+
+    int s=0;
+    while(s<8)
+
+    {
+
+        getline(file, line[s]);
+        cout << s + 1 << "." << line[s] << "\n";
+
+        s++;
+    }
+    file.close();
+    cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
+    cin >> ans;
 }
 
 void cennik(){
@@ -109,26 +161,39 @@ void rozklad_sali(){
          << "\t           [C,1][C,2][C,3][C,4]   [C,5][C,6][C,7][C,8]   [C,9][C,10][C,11][A,12]\n"
          << "\t           [D,1][D,2][D,3][D,4]   [D,5][D,6][D,7][D,8]   [D,9][D,10][D,11][A,12]\n"
          << "\t           [E,1][E,2][E,3][E,4]   [E,5][E,6][E,7][E,8]   [E,9][E,10][E,11][A,12]\n\n";
-    cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
-    cin >> ans;
+    if(flaga){
+        cout << "\n\n\t\tPodaj nazwe rzedu(A-B):";
+        cin >> rzad;
+        cout << "\n\n\t\tPodaj numer  miejsca(1-13):";
+        cin >> miej;
+
+    }
+    if(!flaga) {
+        cout << "\n\n\t\tChcesz wrocic do MENU? (t/n)";
+        cin >> ans;
+    }
 }
 void menu(){
-    auto now = std::chrono::system_clock::now();
-    std::time_t c_time = std::chrono::system_clock::to_time_t(now);
+
 
 
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t       System rezerwacji miejsc ";
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t\tWitaj w naszym kinie! ";
-    cout << "\n\t\t\tDzis mamy: " << ctime(&c_time);
+    if (minuty<10){
+        cout << "\n\t\tDzis mamy: "<<tydzien[dzietyg-1]<<" "<<dzienmie<<" "<<miesiac[mies-1]<<" "<<rok<<" godzina - "<<godzina+2<<":0"<<minuty;
+    }
+    else{
+    cout << "\n\t\tDzis mamy: "<<tydzien[dzietyg-1]<<" "<<dzienmie<<" "<<miesiac[mies-1]<<" "<<rok<<" godzina - "<<godzina+2<<":"<<minuty;}
     cout << "\n\n\t\t<1> Zarezerwuj bilet";
     cout << "\n\t\t<2> Co jest grane?";
     cout << "\n\t\t<3> Cennik";
     cout << "\n\t\t<4> Promocje";
     cout << "\n\t\t<5> Rozklad sali kinowej";
-    cout << "\n\t\t<6> Wyjscie \n";
-    cout << "\n\t\tWybierz opcje 1-6:" << "\t";
+    cout << "\n\t\t<6> Wyswietl zapisany bilet.";
+    cout << "\n\t\t<7> Wyjscie \n";
+    cout << "\n\t\tWybierz opcje 1-7:" << "\t";
 }
 void open_file(){  //odczyt seansow z pliku
     fstream file;
@@ -140,7 +205,7 @@ void open_file(){  //odczyt seansow z pliku
     }
 
     int s=0;
-    while(s<5)
+    while(s<filmax)
 
     {
 
@@ -157,7 +222,8 @@ void open_file2() {
     fstream file;
 
     string nazwy={"godziny"};
-    filename=nazwy + itoa(a, przyrostek,10)+".csv";
+    sprintf(przyrostek,"%d",a);
+    filename=nazwy + przyrostek+".csv";
 
     file.open(filename, ios::in);
     if (!file.good()) {
@@ -165,7 +231,6 @@ void open_file2() {
         system("pause");
 
     }
-
     int z = 0;
     do {
 
@@ -174,7 +239,7 @@ void open_file2() {
         cout << z + 1 << "." << godziny[z] << "\n";
         z++;
     }
-    while (z<5);
+    while (z<filmax);
     file.close();
 
 }
@@ -194,6 +259,9 @@ void dane(){cout << "\n\n\t\tWybierz godzine: ";
     cout << "\n\t\t\t:";
     cin >> x;
     cena();
+    cout << "\n\t\t\tPrzejdzmy do wyboru miejsca:\n\t";
+    flaga=true;
+    rozklad_sali();
 }
 
 void cena() {
@@ -221,9 +289,11 @@ void bilet(){
     cout << "\n\t\t\tImie: 		" << t.imie;
     cout << "\n\t\t\tNr tel.:	" << t.tel;
     cout << "\n\t\t\tMail:		" << t.mail;
+    cout << "\n\t\t\tRzad:		" << rzad;
+    cout << "\n\t\t\tMiejsce:	" << miej;
     cout << "\n\t\t\tGodzina seansu:	" <<godziny[b-1];
     cout << "\n\t\t\tSuma:   \t" << suma << " zl";
-    cout << "\n\n\t\t\tChcesz zapisac bilet do pliku(t/n)";// zapisywanie nie dziala xd
+    cout << "\n\n\t\t\tChcesz zapisac bilet do pliku(t/n)";
     cin >> ans;
     if (ans=='t')
     {
@@ -236,6 +306,8 @@ void bilet(){
         file<<"Imie:"<<t.imie<<endl;
         file<<"Nr tel.:"<<t.tel<<endl;
         file<<"Mail:"<<t.mail<<endl;
+        file<<"Rzad:"<<rzad<<endl;
+        file<<"Miejsce:"<<miej<<endl;
         file<< "Godzina seansu:"<<godziny[b-1]<<endl;
         file<<"Suma:"<<suma<<"zl"<<endl;
         file.close();
