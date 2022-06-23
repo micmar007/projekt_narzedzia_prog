@@ -203,7 +203,7 @@ void menu(){
     time_t liczba_sekund;
 
     time(&liczba_sekund);
-    localtime_r(&liczba_sekund, &strukt);
+    gmtime_r (&liczba_sekund, &strukt);
     time_t czas;
     struct tm * data;
     char godzina[ 80 ];
