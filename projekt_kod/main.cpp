@@ -47,9 +47,12 @@ struct tm  local_time;
 
 int main() {
     srand( time( NULL ) );
-    time_t current_time;
-    time ( &current_time );
-    localtime_s(&local_time, &current_time);
+    time_t now = time(0);
+    char buf[80];
+    local_time = *localtime(&now);
+    strftime(buf, sizeof(buf), "%B %A ", &local_time);
+
+
 
     mies  = local_time.tm_mon ;
     dzienmie    = local_time.tm_mday;
@@ -218,7 +221,7 @@ void menu(){
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t\tWitaj w naszym kinie! ";
 
-    cout << "\n\t\tDzis mamy: "<<tydzien[local_time.tm_wday-1]<<" "<<local_time.tm_mday<<" "<<miesiac[local_time.tm_mon]<<" "<<1900+local_time.tm_year<<" "<<local_time.tm_hour<<":";
+    cout << "\n\t\t     Dzis mamy: "<<tydzien[local_time.tm_wday-1]<<" "<<local_time.tm_mday<<" "<<miesiac[local_time.tm_mon]<<" "<<1900+local_time.tm_year<<" "<<local_time.tm_hour<<":";
     if(local_time.tm_min<10) cout<<"0"<<local_time.tm_min;
       else cout<<local_time.tm_min;
 
