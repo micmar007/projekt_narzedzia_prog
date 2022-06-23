@@ -1,9 +1,9 @@
-Nr. rezerwacji: 7195
-Imie: 2
-Nr tel.:2
-Mail: 2
-Rzad: 2
-Miejsce: 2
-Godzina seansu: 17:15
-Data: Czwartek 30 Czerwiec
-Suma:90 zl
+Nr. rezerwacji: 7531
+Imie: 1
+Nr tel.:1
+Mail: 11
+Rzad: 1
+Miejsce: 1
+Godzina seansu: 15:00
+Data: Piatek 1 Lipiec
+Suma:35 zl
