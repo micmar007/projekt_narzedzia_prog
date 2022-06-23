@@ -15,4 +15,8 @@ fstream
 -
 cstdlib
 -
+string
+-
+wchar.h
+-
 

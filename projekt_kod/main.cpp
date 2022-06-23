@@ -2,7 +2,8 @@
 #include <time.h>
 #include <fstream>
 #include <cstdlib>
-
+#include<string>
+#include<wchar.h>
 
 
 void rezerwacja();
@@ -54,6 +55,8 @@ int main() {
     dzienmie    = local_time.tm_mday;
     dzienroku = local_time.tm_yday;
     dzientyg =local_time.tm_wday;
+
+
 
 
     do {
@@ -215,7 +218,7 @@ void menu(){
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t\tWitaj w naszym kinie! ";
 
-    cout << "\n\t\t     Dzis mamy: "<<tydzien[local_time.tm_wday-1]<<" "<<local_time.tm_mday<<" "<<miesiac[local_time.tm_mon]<<" "<<1900+local_time.tm_year<<" "<<local_time.tm_hour<<":";
+    cout << "\n\t\tDzis mamy: "<<tydzien[local_time.tm_wday-1]<<" "<<local_time.tm_mday<<" "<<miesiac[local_time.tm_mon]<<" "<<1900+local_time.tm_year<<" "<<local_time.tm_hour<<":";
     if(local_time.tm_min<10) cout<<"0"<<local_time.tm_min;
       else cout<<local_time.tm_min;
 
