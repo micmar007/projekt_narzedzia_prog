@@ -1,9 +1,9 @@
-Nr. rezerwacji:8896
-Imie:fsd
-Nr tel.:sdfs
-Mail:fsdf
-Rzad:A
-Miejsce:3
-Godzina seansu:19:00
-Data:Sroda 22 Czerwiec
-Suma:55zl
+Nr. rezerwacji: 7195
+Imie: 2
+Nr tel.:2
+Mail: 2
+Rzad: 2
+Miejsce: 2
+Godzina seansu: 17:15
+Data: Czwartek 30 Czerwiec
+Suma:90 zl

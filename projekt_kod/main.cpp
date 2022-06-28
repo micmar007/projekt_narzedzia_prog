@@ -3,8 +3,8 @@
 #include <fstream>
 #include <string>
 #include <chrono>
-#include <windows.h>
-#include <winbase.h>
+#include <cstdlib>
+#include <wchar.h>
 
 
 void rezerwacja();
@@ -36,6 +36,7 @@ public:
     char mail[30];
 } t;
 
+struct tm strukt;
 
 
 
@@ -43,18 +44,10 @@ public:
 
 int main() {
 
-    SYSTEMTIME st;
-    GetSystemTime(&st);
-    dzietyg=st.wDayOfWeek;
-    rok=st.wYear;
-    mies=st.wMonth;
-    dzienmie=st.wDay;
-    godzina =st.wHour;
-    minuty=st.wMinute;
-    dzienroku=dzienmie+liczbaDni[mies-1];
 
 
-    cout<<dzienroku;
+
+
     srand( time( NULL ) );
     do {
 
@@ -120,25 +113,29 @@ void rezerwacja() {
 }
 
 void data(){
-    cout << "\n\n\tDaty seansow dla filmu " <<line[a-1]<<":\n\n";
-for (int i=0;i<7;i++){
-if (dzienroku+i>liczbaDni[mies])
-{
-if(flaga2=true)
-{
-mies=mies+1;
-flaga2=false;
-}
 
-dzienmie=1-i;}
+for (int i=0;i<7;i++){
+
+if (dzienroku+i+1>liczbaDni[mies+1])
+
+
+{
+  if(flaga2)
+ {
+  mies=mies+1;
+  flaga2=false;
+ }dzienmie=1-i;
+  }
 
 if (dzietyg-1+i>6)
-    cout<<i+1<<"."<< tydzien[dzietyg+i-8]<<" "<<dzienmie+i<<" "<<miesiac[mies-1]<<"\n";
+    cout<<i+1<<"."<< tydzien[dzietyg+i-8]<<" "<<dzienmie+i<<" "<<miesiac[mies]<<"\n";
+
 else
-cout<<i+1<<"."<< tydzien[dzietyg-1+i]<<" "<<dzienmie+i<<" "<<miesiac[mies-1]<<"\n";
+cout<<i+1<<"."<< tydzien[dzietyg-1+i]<<" "<<dzienmie+i<<" "<<miesiac[mies]<<"\n";
 
 
-}}
+}
+mies=mies-1;}
 
 void wys_bilet(){
     cout << "\t _______________________________________________________________________\n";
@@ -203,18 +200,33 @@ void rozklad_sali(){
     }
 }
 void menu(){
+    time_t liczba_sekund;
+
+    time(&liczba_sekund);
+    localtime_r(&liczba_sekund, &strukt);
+    time_t czas;
+    struct tm * data;
+    char godzina[ 80 ];
+
+    time( & czas );
+    data = localtime( & czas );
+
+    strftime( godzina, 80, " Godzina %H:%M:%S.", data );
+    dzienmie=strukt.tm_mday;
+    mies=strukt.tm_mon;
+    dzietyg=strukt.tm_wday;
+    dzienroku=strukt.tm_yday;
 
 
-
+    rok=1849+strukt.tm_yday;
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t       System rezerwacji miejsc ";
     cout << "\n\t\t\t-------------------------------------";
     cout << "\n\t\t\t\tWitaj w naszym kinie! ";
-    if (minuty<10){
-        cout << "\n\t\tDzis mamy: "<<tydzien[dzietyg-1]<<" "<<dzienmie<<" "<<miesiac[mies-1]<<" "<<rok<<" godzina - "<<godzina+2<<":0"<<minuty;
-    }
-    else{
-    cout << "\n\t\tDzis mamy: "<<tydzien[dzietyg-1]<<" "<<dzienmie<<" "<<miesiac[mies-1]<<" "<<rok<<" godzina - "<<godzina+2<<":"<<minuty;}
+
+    cout << "\n\t\tDzis mamy: "<<tydzien[strukt.tm_wday-1]<<" "<<strukt.tm_mday<<" "<<miesiac[strukt.tm_mon]<<" "<<1900+strukt.tm_year<<godzina;
+
+
     cout << "\n\n\t\t<1> Zarezerwuj bilet";
     cout << "\n\t\t<2> Co jest grane?";
     cout << "\n\t\t<3> Cennik";
@@ -310,9 +322,13 @@ void cena() {
         case 2:
             suma = (ulg * 20) + (norm * 25);
     }
+
 }
 void bilet(){
-    int rez=1000+rand()%9999;
+    dzienmie=strukt.tm_mday;
+    mies=strukt.tm_mon;
+
+    int rez=1000+rand()%9999, i=s-1;
     cout << "\n\n\t\t\tTwoj bilet:\n ";
     cout << "\n\t\t\tNr. rezerwacji: "<<rez	;
     cout << "\n\t\t\tImie: 		" << t.imie;
@@ -320,14 +336,18 @@ void bilet(){
     cout << "\n\t\t\tMail:		" << t.mail;
     cout << "\n\t\t\tRzad:		" << rzad;
     cout << "\n\t\t\tMiejsce:	" << miej;
-    if (dzienroku+s-1>liczbaDni[mies])
-    {   mies=mies+1;
-        dzienmie=1-s-1;}
 
-    if (dzietyg-1+s-1>6)
-        cout << "\n\t\t\tData:		"<< tydzien[dzietyg+s-1-8]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1]<<"\n";
+    if (dzienroku+i+1>liczbaDni[mies+1])
+
+    {
+        mies=mies+1;
+        dzienmie=1-i;
+    }
+
+    if (dzietyg-1+i>6)
+        cout<<"\n\t\t\tData:           "<< tydzien[dzietyg+i-8]<<" "<<dzienmie+i<<" "<<miesiac[mies]<<"\n";
     else
-        cout << "\n\t\t\tData:		"<< tydzien[dzietyg-1+s-1]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1]<<"\n";
+        cout<<"\n\t\t\tData:           "<< tydzien[dzietyg-1+i]<<" "<<dzienmie+i<<" "<<miesiac[mies];
 
     cout << "\n\t\t\tGodzina seansu:	" <<godziny[b-1];
     cout << "\n\t\t\tSuma:   \t" << suma << " zl";
@@ -340,18 +360,18 @@ void bilet(){
         file.open("bilet.txt",ios::out);
 
 
-        file<<"Nr. rezerwacji:"<<rez<<endl;
-        file<<"Imie:"<<t.imie<<endl;
-        file<<"Nr tel.:"<<t.tel<<endl;
-        file<<"Mail:"<<t.mail<<endl;
-        file<<"Rzad:"<<rzad<<endl;
-        file<<"Miejsce:"<<miej<<endl;
-        file<< "Godzina seansu:"<<godziny[b-1]<<endl;
+        file<<"Nr. rezerwacji: "<<rez<<endl;
+        file<<"Imie: "<<t.imie<<endl;
+        file<<"Nr tel.:" <<t.tel<<endl;
+        file<<"Mail: "<<t.mail<<endl;
+        file<<"Rzad: "<<rzad<<endl;
+        file<<"Miejsce: "<<miej<<endl;
+        file<< "Godzina seansu: "<<godziny[b-1]<<endl;
         if (dzietyg-1+s-1>6)
-            file<< "Data:" <<tydzien[dzietyg+s-1-8]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1] ;
+            file<< "Data: " <<tydzien[dzietyg+s-1-8]<<" "<<dzienmie+s-1<<" "<<miesiac[mies] <<endl;
         else
-            file<< "Data:" <<tydzien[dzietyg-1+s-1]<<" "<<dzienmie+s-1<<" "<<miesiac[mies-1] ;
-        file<<"Suma:"<<suma<<"zl"<<endl;
+            file<< "Data: " <<tydzien[dzietyg-1+s-1]<<" "<<dzienmie+s-1<<" "<<miesiac[mies] <<endl;
+        file<<"Suma:" <<suma<<" zl"<<endl;
         file.close();
         cout << "\n\n\t\t\tZapisano!";
     }
